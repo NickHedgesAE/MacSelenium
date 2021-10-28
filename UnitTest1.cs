@@ -5,9 +5,9 @@ using OpenQA.Selenium.Chrome;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace TenantAppTests
+namespace Befimmo
 {
-    public class SeleniumTests
+    public class Tests
     {
         private IWebDriver driver;
         private IJavaScriptExecutor js;
@@ -23,7 +23,7 @@ namespace TenantAppTests
         }
 
         [Test]
-        public void DemoTest()
+        public void Buildings()
         {
             driver.Navigate().GoToUrl("https://www.standaard.be");
             driver.FindElement(By.Id("didomi-notice-agree-button")).Click();
