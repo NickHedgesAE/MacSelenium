@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace Befimmo
 {
@@ -14,6 +16,7 @@ namespace Befimmo
         [SetUp]
         public void Setup()
         {
+            new DriverManager().SetUpDriver(new ChromeConfig());
             driver = new ChromeDriver();
             js = (IJavaScriptExecutor)driver;
             vars = new Dictionary<string, object>();
